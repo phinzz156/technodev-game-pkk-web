@@ -1,0 +1,804 @@
+/* App Details Page Styles */
+.app-details {
+    padding: 4rem 0;
+    background: #f9f9f9;
+}
+
+.app-details-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Screenshots Section */
+.app-screenshots {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.main-screenshot {
+    margin-bottom: 1.5rem;
+}
+
+.screenshot-placeholder {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.screenshot-thumbnails {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    background: var(--light);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.thumbnail:hover {
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.thumbnail.active {
+    border-color: var(--secondary);
+    background: var(--secondary);
+    color: white;
+}
+
+/* App Info Sidebar */
+.app-info-sidebar {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.app-meta h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--light);
+    padding-bottom: 0.5rem;
+}
+
+.meta-item {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.meta-item strong {
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+.meta-item .app-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.status-published {
+    background: #27ae60;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status-draft {
+    background: #f39c12;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* App Actions */
+.app-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-primary {
+    background: var(--secondary);
+    color: white;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    display: block;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+    color: white;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--secondary);
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--secondary);
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: block;
+}
+
+.btn-secondary:hover {
+    background: var(--secondary);
+    color: white;
+}
+
+/* App Description */
+.app-description {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.app-description h3 {
+    color: var(--primary);
+    margin: 2rem 0 1rem 0;
+    font-size: 1.5rem;
+}
+
+.app-description h3:first-child {
+    margin-top: 0;
+}
+
+.app-description p {
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.app-description ul {
+    color: var(--text);
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.app-description ul li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* Technical Specs */
+.tech-specs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.tech-spec {
+    background: var(--light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.tech-spec h4 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.tech-spec p {
+    color: var(--text-light);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Download Stats */
+.download-stats {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.download-stats h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .app-details-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .app-info-sidebar {
+        position: static;
+    }
+    
+    .screenshot-placeholder {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-details {
+        padding: 2rem 0;
+    }
+    
+    .app-screenshots,
+    .app-info-sidebar,
+    .app-description {
+        padding: 1.5rem;
+    }
+    
+    .screenshot-placeholder {
+        height: 250px;
+        font-size: 1.2rem;
+    }
+    
+    .screenshot-thumbnails {
+        flex-wrap: wrap;
+    }
+    
+    .app-actions {
+        flex-direction: column;
+    }
+    
+    .tech-specs {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-details-container {
+        gap: 1.5rem;
+    }
+    
+    .app-screenshots,
+    .app-info-sidebar,
+    .app-description {
+        padding: 1rem;
+    }
+    
+    .screenshot-placeholder {
+        height: 200px;
+        font-size: 1rem;
+    }
+    
+    .thumbnail {
+        width: 60px;
+        height: 60px;
+        font-size: 0.7rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Animation for screenshot change */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.main-screenshot .screenshot-placeholder {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background: var(--light);
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.breadcrumb-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: var(--text-light);
+}
+
+/* Image Styling */
+.screenshot-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.app-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Loading state for images */
+img {
+    background: #f0f0f0;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Image hover effects */
+.screenshot-img:hover {
+    transform: scale(1.02);
+}
+
+.thumbnail:hover img {
+    transform: scale(1.1);
+}
+
+/* Video Section Styles */
+.video-section {
+    padding: 3rem 0;
+    background: var(--light);
+    margin: 2rem 0;
+    border-radius: 12px;
+}
+
+.video-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Video Modal */
+.video-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    animation: fadeIn 0.3s ease;
+}
+
+.video-modal-content {
+    position: relative;
+    margin: 2% auto;
+    width: 90%;
+    max-width: 800px;
+    animation: slideIn 0.3s ease;
+}
+
+.video-modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.video-modal-close:hover {
+    color: var(--secondary);
+}
+
+.video-modal-iframe-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-modal-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Video Button in Sidebar */
+.video-btn {
+    background: linear-gradient(135deg, #ff0000, #cc0000);
+    color: white;
+    border: none;
+}
+
+.video-btn:hover {
+    background: linear-gradient(135deg, #cc0000, #990000);
+    transform: translateY(-2px);
+}
+
+/* Responsive Video */
+@media (max-width: 768px) {
+    .video-section {
+        padding: 2rem 0;
+        margin: 1rem 0;
+    }
+    
+    .video-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .video-actions .btn {
+        width: 200px;
+    }
+    
+    .video-modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Video thumbnail placeholder */
+.video-thumbnail {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.02);
+}
+
+.video-thumbnail::before {
+    content: '▶';
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.video-thumbnail:hover img {
+    transform: scale(1.1);
+}
+
+/* Main Display Area */
+.main-display {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.image-display,
+.video-display {
+    display: none;
+    width: 100%;
+}
+
+.image-display.active,
+.video-display.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.video-display .video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.video-display .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.display-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Thumbnails dengan video */
+.screenshot-thumbnails {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.thumbnail.active {
+    border-color: var(--secondary);
+    transform: scale(1.1);
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    border-color: var(--primary);
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail:hover .thumbnail-overlay {
+    opacity: 1;
+}
+
+/* Video Thumbnail Specific */
+.video-thumbnail-btn {
+    background: linear-gradient(135deg, #ff0000, #cc0000);
+}
+
+.video-thumbnail-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+}
+
+.play-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.video-label {
+    font-size: 0.7rem;
+    opacity: 0.9;
+}
+
+/* Video button in sidebar */
+.video-sidebar-btn {
+    background: linear-gradient(135deg, #ff0000, #cc0000);
+    color: white;
+    border: none;
+    width: 100%;
+}
+
+.video-sidebar-btn:hover {
+    background: linear-gradient(135deg, #cc0000, #990000);
+    transform: translateY(-2px);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .thumbnail {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .display-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .display-actions .btn {
+        width: 200px;
+    }
+    
+    .video-thumbnail-placeholder .video-label {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .thumbnail {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .play-icon {
+        font-size: 1.2rem;
+    }
+    
+    .video-label {
+        display: none;
+    }
+}
